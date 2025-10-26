@@ -50,7 +50,7 @@ class Articles extends Component {
     }
 
     getLastArticles = () => {
-        axios.get(this.url + "articles")
+        axios.get(this.url + "articles/true")
             .then(res => {
 
                 this.setState({
