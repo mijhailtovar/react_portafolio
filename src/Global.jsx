@@ -1,14 +1,13 @@
-// Global.jsx (o Global.js)
-
-/* * 1. import.meta.env.VITE_APP_API_URL es la variable que Vercel inyectará 
- * (asumiendo que la configuraste en el panel de Vercel).
- * 2. || (OR) 'http://localhost:3900/api/' se usa como valor por defecto 
- * cuando estás desarrollando en local.
- */
-
 var Global = {
-    // Lee la variable de entorno de Vite o usa el valor local por defecto
-    url: import.meta.env.VITE_APP_API_URL || 'http://localhost:3900/api/'
+    // 1. Lee la variable de entorno de Vercel (o localhost por defecto)
+    // 2. Asegúrate de que el valor termine con la ruta base de la API '/api/'
+    //    Si VERCEL_URL es: https://backend...railway.app
+    //    Entonces this.url será: https://backend...railway.app/api/
+
+    // Usamos el operador ternario para asegurar que el localhost tenga el puerto correcto.
+    url: (import.meta.env.VITE_APP_API_URL 
+          ? import.meta.env.VITE_APP_API_URL + '/api/'
+          : 'http://localhost:3900/api/')
 };
 
 export default Global;
