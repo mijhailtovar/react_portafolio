@@ -4,10 +4,8 @@ var Global = {
     //    Si VERCEL_URL es: https://backend...railway.app
     //    Entonces this.url será: https://backend...railway.app/api/
 
-    // Usamos el operador ternario para asegurar que el localhost tenga el puerto correcto.
-    url: (import.meta.env.VITE_APP_API_URL 
-          ? import.meta.env.VITE_APP_API_URL + '/api/'
-          : 'http://localhost:3900/api/')
+        url: (import.meta.env.VITE_APP_API_URL || 'http://localhost:3900') + '/api/'
+
 };
 
 export default Global;
