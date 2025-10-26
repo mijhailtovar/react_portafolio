@@ -17,7 +17,7 @@ function Sidebar({ blog }) {
             // 3. Redirige al usuario a la ruta de búsqueda
             
             console.log('/blog/busqueda/' + searchTerm);
-            navigate('/blog/busqueda/' + searchTerm);         
+            navigate('/blog/busqueda/' + searchTerm + '/');         
         };
 
         const redirectToCreate = (e) => {
