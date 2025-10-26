@@ -9,6 +9,8 @@ function Parametros_busqueda() {
      * le pasamos los parametros de la url como props para que pueda
      * leerlos
      */
+    debugger;
+    console.log(params);
     return <Search params={params} />;
 }
 
