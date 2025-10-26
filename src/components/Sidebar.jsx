@@ -15,6 +15,8 @@ function Sidebar({ blog }) {
             
             //alert("tu input es: " + searchTerm);
             // 3. Redirige al usuario a la ruta de búsqueda
+            debugger;
+            console.log('/blog/busqueda/' + searchTerm);
             navigate('/blog/busqueda/' + searchTerm);         
         };
 
