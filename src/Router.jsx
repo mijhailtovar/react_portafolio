@@ -13,7 +13,7 @@ import Home from "./components/home";
 import Blog from "./components/Blog";
 import Formulario from "./components/Formulario";
 import Search from "./components/Search";
-import Parametros_busqueda from "./components/parametros_busqueda";
+import Parametros_busqueda from "./components/Parametros_busqueda"
 import Article from "./components/Article";
 import Article_parametros from "./components/Article_parametros";
 import CreateArticle from "./components/CreateArticle";
