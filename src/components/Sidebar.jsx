@@ -10,14 +10,14 @@ function Sidebar({ blog }) {
             //comenta la linea de abajo esto para que al usar el buscador no tengass que 
             // regargar la pagina para que funcione
             //esta comentado para que funcione
-            //e.preventDefault(); // Previene que la página se recargue
+            e.preventDefault(); // Previene que la página se recargue
             const searchTerm = e.target.search.value; // Obtiene el valor del input
             
             //alert("tu input es: " + searchTerm);
             // 3. Redirige al usuario a la ruta de búsqueda
             
             console.log('/blog/busqueda/' + searchTerm);
-            navigate('/blog/busqueda/' + searchTerm + '/');         
+            navigate('/blog/busqueda/' + searchTerm);         
         };
 
         const redirectToCreate = (e) => {
